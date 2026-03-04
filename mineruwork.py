@@ -19,10 +19,13 @@ def run_extraction():
         server_url="http://127.0.0.1:8000" #/v1",
         #model_name="opendatalab/MinerU2.5-2509-1.2B"
     )
-    pdf_files = glob.glob(f"{data_dir}/*.pdf")
+    #pdf_files = glob.glob(f"{data_dir}/*.pdf")
+    interests = [254, 316, 363, 1071, 1182]
+    pdf_files = [f"{data_dir}/{idx}.pdf" for idx in interests]
     print(f"Found {len(pdf_files)} files. Starting sequential processing...")
     for pdf_path in pdf_files:
         fname = os.path.basename(pdf_path)
+        fname = fname.split(".")[0]
         if os.path.getsize(pdf_path) == 0:
             print(f"!! Skipping empty file: {fname}")
             continue
