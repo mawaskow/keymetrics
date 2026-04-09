@@ -11,4 +11,7 @@
 - Extracts text/formatting from each page of each PDF and saves to json
 
 3. post_mineru.ipynb
-- Figures our how to construct dataset from new jsons and metadata sheet
+- Figures out how to construct dataset from new jsons and metadata sheet
+
+4. iaa.ipynb
+- Compares annotations of doccano dataset
