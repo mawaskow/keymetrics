@@ -1,5 +1,7 @@
 data/pdfs/*
 keyenv
+data/*.jsonl
+data/*.json
 data/output_jsons/*
 kmavenv
 data/peat_doc_sents.jsonl
